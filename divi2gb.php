@@ -7,7 +7,7 @@ Description: Help to convert Divi pages to Gutenberg
 Version: 0.0.0
 Author: bobbingwide
 Author URI: https://www.oik-plugins.com/author/bobbingwide
-Text Domain: cwiccer
+Text Domain: divi2gb
 Domain Path: /languages/
 License: GPLv2
  */
@@ -107,7 +107,7 @@ function divi2gb_handle_rsb( $code, $shortcode ) {
 			$button = divi2gb_extract_attribute( 'button_text', $parts[0]);
 			$url = divi2gb_extract_attribute( 'button_link', $parts[0]);
 			$image = divi2gb_extract_attribute( 'image', $parts[0]);
-			echo "<h3>$heading</h3>";
+			echo "<h2>$heading</h2>";
             echo divi2gb_generate_image( $image, null, null  );
 			echo $text;
 			echo "<a href=\"$url\">$button</a>";
@@ -115,7 +115,7 @@ function divi2gb_handle_rsb( $code, $shortcode ) {
 
 		case 'et_pb_blurb':
 			$title = divi2gb_extract_attribute( 'title', $parts[0] );
-			echo "<h3>$title</h3>";
+			echo "<h2>$title</h2>";
 			echo $text;
 			break;
 
